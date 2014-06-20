@@ -1,0 +1,48 @@
+﻿<!--
+Developed by: Punit Shah
+Purpose: Assignment
+Reference used:
+1) http://backbonejs.org/ (basics and to-do tutorial)
+2) github API (json url to fetch list of open repository)
+3) https://github.com/addyosmani/backbone-fundamentals (viewed and learned through examples)
+-->
+
+<!DOCTYPE html>
+<head>
+	<title>7Geese Repository List</title>
+	<style>
+		body {
+			font-family: "Times New Roman", Times, serif;
+		}
+		span {
+			color: #4183c4;
+			font-size: 22px;
+		}
+	</style>
+</head>
+<body>
+	
+	<!-- repository template-->
+    <script type="text/template" id="repotemplate">
+		<!-- title-->
+		<h1>7Geese Repository List</h1>
+		
+		<!-- unordered list-->
+        <ul>
+        </ul>
+    </script>
+	
+	<!-- repository item template-->
+    <script type="text/template" id="repoitemtemplate">
+		<div><span><%= full_name %></span></div>
+		<div>Created on: <%= created_at %> </div>
+		<div>Total forks :<%= forks %> </div>
+		<hr>
+    </script>
+ 
+	<script src="scripts/lib/jquery-1.7.1.js" ></script>
+    <script src="scripts/lib/underscore.js" ></script>
+    <script src="scripts/lib/backbone.js" ></script>
+    <script src="scripts/7geese.js" ></script>   
+</body>
+</html>
